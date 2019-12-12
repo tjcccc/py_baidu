@@ -37,7 +37,7 @@ def main():
 
     soup = BeautifulSoup(results, features='html.parser')
     raw_results = soup.find_all(class_='result')
-    
+
     results = []
     for index, raw_result in enumerate(raw_results):
         title = raw_result.find('h3').find('a').get_text()
